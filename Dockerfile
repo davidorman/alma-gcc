@@ -3,10 +3,10 @@
 FROM almalinux/9-minimal
 ENV container docker
 
-RUN microdnf install -y dnsmasq
+RUN microdnf install -y gcc
 
-CMD dnsmasq -k --conf-dir=/etc/dnsmasq.d/,\*.conf
-#CMD sleep infinity
+
+CMD sleep infinity
 
 #sudo docker build --rm -t isuhpc/dnsmasq .
 #sudo docker run -ti  -d --rm -v -p 80:80 --name dnsmasq isuhpc/dnsmasq
